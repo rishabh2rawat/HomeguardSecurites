@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2"
+    tools:context="com.rishabhrawat.homeguardsecurites.MainActivity">
+
+    <!--top bar headder-->
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/topgradient">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:id="@+id/parent_rellyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!-- visitor image section-->
+            <RelativeLayout
+                android:id="@+id/center_profileimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/addprofile"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="45dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/uploadimage"
+                    android:layout_below="@id/profile_image"
+                    android:text="Confirm Image get URL"
+                    android:textColor="#420ede"
+                    android:textAlignment="center"
+
+                    />
+            </RelativeLayout>
+
+            <!--visitor detail section-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detail_sec"
+                android:layout_below="@+id/center_profileimage">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card1"
+                    android:layout_margin="10dp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@android:color/white"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--name sec-->
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textStyle="bold"
+                            />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="enter name"
+                            android:layout_marginBottom="10dp"
+                            android:singleLine="true"
+                            />
+
+                        <!--Mobile no-->
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile No" />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:inputType="phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="enter mobile no"
+                            android:layout_marginBottom="10dp"
+                            android:digits="0123456789+"
+                            android:maxLength="13"
+                            android:singleLine="true"
+                            />
+
+                        <!--no of visitors-->
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No of visitors (including visitor)"
+                            />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:inputType="phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint=" enter number of people with visitor"
+                            android:layout_marginBottom="10dp"
+                            android:singleLine="true"
+
+                            />
+
+                        <!--pourpose of visit-->
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Catagory"/>
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/visit_dropdown"
+                                android:spinnerMode="dropdown"
+                                >
+
+                            </android.support.v7.widget.AppCompatSpinner>
+
+                        <!--multiple selection autocompleate text-->
+                        <android.support.v7.widget.AppCompatTextView
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Visiting to"
+                            />
+                        <android.support.v7.widget.AppCompatMultiAutoCompleteTextView
+                            android:id="@+id/multipleselect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="where you want to visit"
+                            android:ems="10"
+                            android:singleLine="true"
+                            />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register"
+                android:layout_below="@id/detail_sec"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Register"
+                android:background="@drawable/topgradient"
+                android:textColor="@android:color/white"
+                />
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

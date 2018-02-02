@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "381431821385",
+    "firebase_url": "https://visitor-registration-489f2.firebaseio.com",
+    "project_id": "visitor-registration-489f2",
+    "storage_bucket": "visitor-registration-489f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381431821385:android:bfb83174c68293c3",
+        "android_client_info": {
+          "package_name": "com.rishabhrawat.homeguardsecurites"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381431821385-59hsvhggu2p8lktmda2cldqb159c7ioa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rishabhrawat.homeguardsecurites",
+            "certificate_hash": "882cf955f00174a4fa8f8490d7bc7393327e04a4"
+          }
+        },
+        {
+          "client_id": "381431821385-r4on6ihm7r25tnvkhg5nvramjodutpfl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw1TlM7g6YXaBeOcW16pk8F9c0jBdDKO4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381431821385-r4on6ihm7r25tnvkhg5nvramjodutpfl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
